@@ -279,7 +279,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto max-w-md py-12">
+            <div className="mx-auto grid gap-8 py-12 md:grid-cols-2 md:max-w-4xl">
               <Card className="bg-background relative overflow-hidden border-primary">
                 <div className="absolute top-0 right-0 left-0 h-2 bg-primary"></div>
                 <CardHeader className="text-center">
@@ -377,6 +377,108 @@ export default function LandingPage() {
                 <CardFooter>
                   <Button asChild className="w-full" size="lg">
                     <Link href="#signup">Join the Waitlist</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+              
+              <Card className="bg-background relative overflow-hidden border-primary">
+                <div className="absolute top-0 right-0 left-0 h-2 bg-gradient-to-r from-primary to-violet-600"></div>
+                <div className="absolute top-4 right-4 rounded-full bg-gradient-to-r from-primary to-violet-600 px-3 py-1 text-xs font-medium text-white">Popular</div>
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl">Pallento Pro</CardTitle>
+                  <CardDescription>For power users and professionals.</CardDescription>
+                  <div className="mt-4 text-4xl font-bold">$8<span className="text-lg font-normal">/month</span></div>
+                </CardHeader>
+                <CardContent className="grid gap-4">
+                  <div className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Everything in the free plan</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>AI-powered note suggestions</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Smart equation recognition</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>AI-assisted problem solving</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 text-primary"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Priority support</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild className="w-full" size="lg" variant="default" style={{ background: "linear-gradient(to right, var(--primary), #8b5cf6)" }}>
+                    <Link href="#signup">Get Early Access</Link>
                   </Button>
                 </CardFooter>
               </Card>
