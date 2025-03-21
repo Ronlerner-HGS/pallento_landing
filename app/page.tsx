@@ -16,8 +16,7 @@ import {
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { WaitlistForm } from "@/components/waitlist-form"
-import { Toaster } from "@/components/ui/toaster"
+import { SignupForm } from "@/components/signup-form"
 
 export default function LandingPage() {
   return (
@@ -46,6 +45,9 @@ export default function LandingPage() {
             <Button asChild className="hidden md:inline-flex">
               <Link href="#signup">Join Waitlist</Link>
             </Button>
+            <Button asChild variant="outline" className="hidden md:inline-flex">
+              <Link href="/auth/signin">Sign In</Link>
+            </Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
@@ -69,6 +71,9 @@ export default function LandingPage() {
                   </Link>
                   <Button asChild className="mt-4">
                     <Link href="#signup">Join Waitlist</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="mt-2">
+                    <Link href="/auth/signin">Sign In</Link>
                   </Button>
                 </nav>
               </SheetContent>
@@ -103,7 +108,7 @@ export default function LandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative w-full max-w-[500px] aspect-[4/3] overflow-hidden rounded-xl border shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=800"
+                    src="/Untitled design.png?height=600&width=800"
                     alt="Pallento editor interface showing math equations"
                     fill
                     className="object-cover"
@@ -170,10 +175,10 @@ export default function LandingPage() {
             <div className="mt-12">
               <div className="relative mx-auto max-w-4xl overflow-hidden rounded-xl border shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=1200"
+                  src="/big-pallento2.png?height=597&width=886"
                   alt="Pallento editor interface with math equations and code blocks"
-                  width={1200}
-                  height={600}
+                  width={886}
+                  height={597}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-30"></div>
@@ -391,49 +396,22 @@ export default function LandingPage() {
                   Join our waitlist to get early access to Pallento when we launch.
                 </p>
               </div>
-              <WaitlistForm />
-              <div className="w-full max-w-sm space-y-2">
-                <div className="grid gap-2">
-                  <Button variant="outline" className="w-full flex items-center justify-center gap-2 h-12">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clipPath="url(#clip0_1_52)">
-                        <path
-                          d="M19.999 10.2217C20.0111 9.53428 19.9387 8.84788 19.7834 8.17737H10.2031V11.8884H15.8266C15.7201 12.5391 15.4804 13.162 15.1219 13.7195C14.7634 14.2771 14.2935 14.7578 13.7405 15.1328L13.7209 15.2571L16.7502 17.5568L16.96 17.5774C18.8873 15.8329 19.9986 13.2661 19.9986 10.2217"
-                          fill="#4285F4"
-                        />
-                        <path
-                          d="M10.2055 19.9999C12.9605 19.9999 15.2734 19.111 16.9629 17.5777L13.7429 15.1331C12.8813 15.7221 11.7248 16.1333 10.2055 16.1333C8.91513 16.1259 7.65991 15.7205 6.61791 14.9745C5.57592 14.2286 4.80007 13.1801 4.40044 11.9777L4.28085 11.9877L1.13101 14.3765L1.08984 14.4887C1.93817 16.1456 3.24007 17.5386 4.84997 18.5118C6.45987 19.4851 8.31429 20.0004 10.2059 19.9999"
-                          fill="#34A853"
-                        />
-                        <path
-                          d="M4.39899 11.9777C4.1758 11.3411 4.06063 10.673 4.05807 9.99996C4.06218 9.32799 4.1731 8.66075 4.38684 8.02225L4.38115 7.88968L1.19269 5.4624L1.0884 5.51101C0.372763 6.90343 0 8.4408 0 9.99987C0 11.5589 0.372763 13.0963 1.0884 14.4887L4.39899 11.9777Z"
-                          fill="#FBBC05"
-                        />
-                        <path
-                          d="M10.2059 3.86663C11.668 3.84438 13.0822 4.37803 14.1515 5.35558L17.0313 2.59996C15.1843 0.901848 12.7383 -0.0298855 10.2059 -3.6784e-05C8.31431 -0.000477834 6.4599 0.514732 4.85001 1.48798C3.24011 2.46124 1.9382 3.85416 1.08984 5.51101L4.38946 8.02225C4.79303 6.82005 5.57145 5.77231 6.61498 5.02675C7.65851 4.28118 8.9145 3.87541 10.2059 3.86663Z"
-                          fill="#EB4335"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_1_52">
-                          <rect width="20" height="20" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    Sign up with Google
-                  </Button>
+              <div className="w-full max-w-sm space-y-4">
+                {/* Import the SignupForm component */}
+                <SignupForm />
+                <div className="text-center">
+                  <p className="text-xs text-muted-foreground">
+                    By signing up, you agree to our{" "}
+                    <Link href="#" className="underline underline-offset-2">
+                      Terms & Conditions
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="#" className="underline underline-offset-2">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  By signing up, you agree to our{" "}
-                  <Link href="#" className="underline underline-offset-2">
-                    Terms & Conditions
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="#" className="underline underline-offset-2">
-                    Privacy Policy
-                  </Link>
-                  .
-                </p>
               </div>
             </div>
           </div>
@@ -458,35 +436,13 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl border shadow-xl">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Pallento demo video placeholder"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="h-16 w-16 rounded-full bg-background/80 backdrop-blur-sm"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                      </svg>
-                      <span className="sr-only">Play Demo</span>
-                    </Button>
-                  </div>
+                  <iframe
+                    src="https://www.youtube.com/embed/AZm37-914mE"
+                    title="Pallento Demo Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
                 </div>
               </div>
             </div>
