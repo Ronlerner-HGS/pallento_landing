@@ -577,6 +577,12 @@ export default function LandingPage() {
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
+            <Link
+              href="https://docs.google.com/presentation/d/1KAOEXNAt-jDSNCkDORcpjtcPGNRZ5FvNTTwLjsJGlCk/edit?usp=sharing"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              Presentation
+            </Link>
           </div>
         </div>
       </footer>
