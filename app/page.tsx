@@ -21,6 +21,10 @@ import { SignupForm } from "@/components/signup-form"
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Announcement Banner */}
+      <div className="bg-yellow-200 text-black p-2 text-center">
+        I will be answering questions today on March 27 after school with Market Masters Club!!!
+      </div>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
